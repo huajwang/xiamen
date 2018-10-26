@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.longmaple.xiamen",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "microservice",
+    "baseName": "notification",
+    "packageName": "com.longmaple.xiamen",
+    "packageFolder": "com/longmaple/xiamen",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzgzNDhiYWQzYjI3YmZhM2ZiNjRmZTMwNDdkNmYwNDRmOGNlMjA4NDZhYTc3YTQxODhhYjI1ZmZjNWNkNWI4MGQyMmYwYWNkNzc4ZDExN2I4M2Q2YTJmNjVhNGI5NDhhZTVhMjRjNTNhYjA4YzNjMGQ3MDQ1NzFmMGU3ZGQ4MzA=",
+    "enableTranslation": true,
+    "languages": [
+      "zh-cn",
+      "en"
+    ],
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "nativeLanguage": "zh-cn",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
