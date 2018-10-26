@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.longmaple.xiamen",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "microservice",
+    "baseName": "invoice",
+    "packageName": "com.longmaple.xiamen",
+    "packageFolder": "com/longmaple/xiamen",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWJhYTUzM2I0ZGY0Zjg2YjRhYmM5NDAwM2Y5MWNmNWE2ZTE3ZWQ5MzU2MTYyNTU3Y2UzMTMwYjU2ZDMxYzg1YTYyMmRiZGYxN2JlNmUyNTk0Mjc4OTBhN2IwYjY5ZWIwMjg4MmQ2ODUwMjA4YjQ4ZjI2NTgzNzc5NDRmMGZkYzQ=",
+    "enableTranslation": true,
+    "languages": [
+      "zh-cn",
+      "en"
+    ],
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "nativeLanguage": "zh-cn",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
