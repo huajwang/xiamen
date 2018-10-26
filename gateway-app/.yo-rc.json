@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.longmaple.xiamen",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "com.longmaple.xiamen",
+    "packageFolder": "com/longmaple/xiamen",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Yjc3MDQ4YzkyYzNkMmE0NTE1YmMzOTM1YjU0MzI1NTg0MDU4YjkyMDQxYjM1MDcxYWQ4OTgxOGZlODY5MTgzMzRjMTcxYzg3ZjEwNDVjYzhhMDE3OTYyYTc0OTAzNDc0MmM5MzYyZGRkZjk5MTcyMTg3M2NhZDA5NDI4MjhhYjY=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "zh-cn",
+    "languages": [
+      "zh-cn",
+      "en"
+    ]
+  }
+}
