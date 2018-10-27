@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
+import { StoreTestModule } from '../../../test.module';
 import { JhiHealthCheckComponent } from 'app/admin/health/health.component';
 import { JhiHealthService } from 'app/admin/health/health.service';
 
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
+                    imports: [StoreTestModule],
                     declarations: [JhiHealthCheckComponent]
                 })
                     .overrideTemplate(JhiHealthCheckComponent, '')

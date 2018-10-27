@@ -55,7 +55,7 @@ version = '0.0.1-SNAPSHOT'
 description = ''
 
 bootWar {
-   mainClassName = 'com.longmaple.xiamen.GatewayApp'
+   mainClassName = 'com.longmaple.xiamen.StoreApp'
 }
 
 war {
@@ -63,7 +63,7 @@ war {
 }
 
 springBoot {
-    mainClassName = 'com.longmaple.xiamen.GatewayApp'
+    mainClassName = 'com.longmaple.xiamen.StoreApp'
     buildInfo()
 }
 
@@ -130,8 +130,8 @@ liquibase {
     activities {
         main {
             driver 'org.h2.Driver'
-            url 'jdbc:h2:file:./target/h2db/db/gateway'
-            username 'gateway'
+            url 'jdbc:h2:file:./target/h2db/db/store'
+            username 'store'
             password ''
             changeLogFile 'src/main/resources/config/liquibase/master.xml'
             defaultSchemaName ''
@@ -140,8 +140,8 @@ liquibase {
         }
         diffLog {
             driver 'org.h2.Driver'
-            url 'jdbc:h2:file:./target/h2db/db/gateway'
-            username 'gateway'
+            url 'jdbc:h2:file:./target/h2db/db/store'
+            username 'store'
             password ''
             changeLogFile project.ext.diffChangelogFile
             referenceUrl 'hibernate:spring:com.longmaple.xiamen.domain?dialect=org.hibernate.dialect.H2Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy'

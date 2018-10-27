@@ -11,12 +11,12 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
-import { GatewaySharedModule } from 'app/shared';
-import { GatewayCoreModule } from 'app/core';
-import { GatewayAppRoutingModule } from './app-routing.module';
-import { GatewayHomeModule } from './home/home.module';
-import { GatewayAccountModule } from './account/account.module';
-import { GatewayEntityModule } from './entities/entity.module';
+import { StoreSharedModule } from 'app/shared';
+import { StoreCoreModule } from 'app/core';
+import { StoreAppRoutingModule } from './app-routing.module';
+import { StoreHomeModule } from './home/home.module';
+import { StoreAccountModule } from './account/account.module';
+import { StoreEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
@@ -24,14 +24,14 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
 @NgModule({
     imports: [
         BrowserModule,
-        GatewayAppRoutingModule,
+        StoreAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
-        GatewaySharedModule,
-        GatewayCoreModule,
-        GatewayHomeModule,
-        GatewayAccountModule,
+        StoreSharedModule,
+        StoreCoreModule,
+        StoreHomeModule,
+        StoreAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
-        GatewayEntityModule
+        StoreEntityModule
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     providers: [
@@ -62,7 +62,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
     ],
     bootstrap: [JhiMainComponent]
 })
-export class GatewayAppModule {
+export class StoreAppModule {
     constructor(private dpConfig: NgbDatepickerConfig) {
         this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
     }

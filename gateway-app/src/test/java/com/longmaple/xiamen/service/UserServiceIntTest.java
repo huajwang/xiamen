@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.service;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.config.Constants;
 import com.longmaple.xiamen.domain.User;
 import com.longmaple.xiamen.repository.UserRepository;
@@ -38,7 +38,7 @@ import static org.mockito.Mockito.when;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 @Transactional
 public class UserServiceIntTest {
 

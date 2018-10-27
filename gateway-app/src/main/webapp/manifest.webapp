@@ -1,6 +1,6 @@
 {
-  "name": "Gateway",
-  "short_name": "Gateway",
+  "name": "Store",
+  "short_name": "Store",
   "icons": [
       {
           "src": "./content/images/hipster192.png",

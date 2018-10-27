@@ -1,9 +1,9 @@
 
 
 {
-  "name": "gateway",
+  "name": "store",
   "version": "0.0.0",
-  "description": "Description for gateway",
+  "description": "Description for store",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

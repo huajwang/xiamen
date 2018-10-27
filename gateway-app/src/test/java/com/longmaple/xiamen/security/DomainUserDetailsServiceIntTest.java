@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.security;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.domain.User;
 import com.longmaple.xiamen.repository.UserRepository;
 
@@ -26,7 +26,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see DomainUserDetailsService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 @Transactional
 public class DomainUserDetailsServiceIntTest {
 

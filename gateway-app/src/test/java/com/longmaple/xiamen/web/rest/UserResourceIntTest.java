@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.web.rest;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.domain.Authority;
 import com.longmaple.xiamen.domain.User;
 import com.longmaple.xiamen.repository.UserRepository;
@@ -42,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 public class UserResourceIntTest {
 
     private static final String DEFAULT_LOGIN = "johndoe";

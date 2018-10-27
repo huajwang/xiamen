@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.web.rest;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.config.audit.AuditEventConverter;
 import com.longmaple.xiamen.domain.PersistentAuditEvent;
 import com.longmaple.xiamen.repository.PersistenceAuditEventRepository;
@@ -32,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

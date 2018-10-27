@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.web.rest.errors;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

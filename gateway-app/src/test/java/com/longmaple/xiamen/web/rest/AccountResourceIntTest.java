@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.web.rest;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.config.Constants;
 import com.longmaple.xiamen.domain.Authority;
 import com.longmaple.xiamen.domain.User;
@@ -48,7 +48,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AccountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 public class AccountResourceIntTest {
 
     @Autowired

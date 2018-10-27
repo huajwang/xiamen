@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.repository;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.config.Constants;
 import com.longmaple.xiamen.config.audit.AuditEventConverter;
 import com.longmaple.xiamen.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static com.longmaple.xiamen.repository.CustomAuditEventRepository.EVENT_D
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

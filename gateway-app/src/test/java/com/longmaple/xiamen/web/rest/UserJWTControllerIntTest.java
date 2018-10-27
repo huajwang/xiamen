@@ -1,6 +1,6 @@
 package com.longmaple.xiamen.web.rest;
 
-import com.longmaple.xiamen.GatewayApp;
+import com.longmaple.xiamen.StoreApp;
 import com.longmaple.xiamen.domain.User;
 import com.longmaple.xiamen.repository.UserRepository;
 import com.longmaple.xiamen.security.jwt.TokenProvider;
@@ -32,7 +32,7 @@ import static org.hamcrest.Matchers.not;
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GatewayApp.class)
+@SpringBootTest(classes = StoreApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

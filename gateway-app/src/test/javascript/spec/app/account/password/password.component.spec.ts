@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { HttpResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
+import { StoreTestModule } from '../../../test.module';
 import { PasswordComponent } from 'app/account/password/password.component';
 import { PasswordService } from 'app/account/password/password.service';
 import { JhiTrackerService } from 'app/core/tracker/tracker.service';
@@ -17,7 +17,7 @@ describe('Component Tests', () => {
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
+                    imports: [StoreTestModule],
                     declarations: [PasswordComponent],
                     providers: [
                         {

@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
+import { StoreTestModule } from '../../../test.module';
 import { UserMgmtUpdateComponent } from 'app/admin/user-management/user-management-update.component';
 import { UserService, User, JhiLanguageHelper } from 'app/core';
 
@@ -20,7 +20,7 @@ describe('Component Tests', () => {
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
+                    imports: [StoreTestModule],
                     declarations: [UserMgmtUpdateComponent],
                     providers: [
                         {

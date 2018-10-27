@@ -17,7 +17,7 @@ import locale from '@angular/common/locales/zh-Hans';
         DatePipe
     ]
 })
-export class GatewayCoreModule {
+export class StoreCoreModule {
     constructor() {
         registerLocaleData(locale);
     }
