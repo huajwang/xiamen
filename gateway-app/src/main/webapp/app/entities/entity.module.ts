@@ -7,6 +7,7 @@ import { StoreProductOrderModule } from './product-order/product-order.module';
 import { StoreOrderItemModule } from './order-item/order-item.module';
 import { StoreInvoiceModule as InvoiceInvoiceModule } from './invoice/invoice/invoice.module';
 import { StoreShipmentModule as InvoiceShipmentModule } from './invoice/shipment/shipment.module';
+import { StoreNotificationModule as NotificationNotificationModule } from './notification/notification.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -19,6 +20,7 @@ import { StoreShipmentModule as InvoiceShipmentModule } from './invoice/shipment
         StoreOrderItemModule,
         InvoiceInvoiceModule,
         InvoiceShipmentModule,
+        NotificationNotificationModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
