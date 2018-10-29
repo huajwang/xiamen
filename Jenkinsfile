@@ -12,16 +12,16 @@ node {
 
         stage('clean') {
             sh "chmod +x gradlew"
-            sh "./gradlew clean --no-daemon"
+            sh "./gateway-app/gradlew clean --no-daemon"
         }
 
         stage('npm install') {
-            sh "./gradlew npmInstall -PnodeInstall --no-daemon"
+            sh "./gateway-app/gradlew npmInstall -PnodeInstall --no-daemon"
         }
 
         stage('backend tests') {
             try {
-                sh "./gradlew test -PnodeInstall --no-daemon"
+                sh "./gateway-app/gradlew test -PnodeInstall --no-daemon"
             } catch(err) {
                 throw err
             } finally {
@@ -31,7 +31,7 @@ node {
 
         stage('frontend tests') {
             try {
-                sh "./gradlew npm_test -PnodeInstall --no-daemon"
+                sh "./gateway-app/gradlew npm_test -PnodeInstall --no-daemon"
             } catch(err) {
                 throw err
             } finally {
@@ -40,12 +40,12 @@ node {
         }
 
         stage('packaging') {
-            sh "./gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
+            sh "./gateway-app/gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
             archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
         }
 
         stage('deployment') {
-            sh "./gradlew deployHeroku --no-daemon"
+            sh "./gateway-app/gradlew deployHeroku --no-daemon"
         }
 
     }
