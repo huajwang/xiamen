@@ -10,17 +10,18 @@ node {
     }
 
     stage('clean') {
-        sh "chmod +x ./gateway-app/gradlew"
-        sh "./gateway-app/gradlew clean --no-daemon"
+        sh "cd gateway-app"
+        sh "chmod +x ./gradlew"
+        sh "./gradlew clean --no-daemon"
     }
 
     stage('npm install') {
-        sh "./gateway-app/gradlew npmInstall -PnodeInstall --no-daemon"
+        sh "./gradlew npmInstall -PnodeInstall --no-daemon"
     }
 
     stage('backend tests') {
         try {
-            sh "./gateway-app/gradlew test -PnodeInstall --no-daemon"
+            sh "./gradlew test -PnodeInstall --no-daemon"
         } catch(err) {
             throw err
         } finally {
