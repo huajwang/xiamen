@@ -12,6 +12,7 @@ node {
     stage('clean') {
         sh "cd gateway-app"
         sh "pwd"
+        sh "ls -l"
         sh "chmod +x ./gradlew"
         sh "./gradlew clean --no-daemon"
     }
