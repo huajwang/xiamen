@@ -10,11 +10,12 @@ node {
     }
 
     stage('clean') {
-        sh "cd gateway-app"
-        sh "pwd"
-        sh "ls -l"
-        sh "chmod +x ./gradlew"
-        sh "./gradlew clean --no-daemon"
+        steps {
+          dir('gateway-app') {
+            sh "chmod +x ./gradlew"
+            sh "./gradlew clean --no-daemon"	
+          } 
+        }
     }
 
     stage('npm install') {
