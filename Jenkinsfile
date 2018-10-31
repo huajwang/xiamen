@@ -17,36 +17,46 @@ node {
     }
 
     stage('npm install') {
-        sh "./gradlew npmInstall -PnodeInstall --no-daemon"
+        dir('gateway-app') {
+          sh "./gradlew npmInstall -PnodeInstall --no-daemon"
+        }
     }
 
     stage('backend tests') {
-        try {
+        dir('gateway-app') {
+          try {
             sh "./gradlew test -PnodeInstall --no-daemon"
-        } catch(err) {
+          } catch(err) {
             throw err
-        } finally {
+          } finally {
             junit '**/build/**/TEST-*.xml'
+          }
         }
     }
 
     stage('frontend tests') {
-        try {
+        dir('gateway-app') {
+          try {
             sh "./gateway-app/gradlew npm_test -PnodeInstall --no-daemon"
-        } catch(err) {
+          } catch(err) {
             throw err
-        } finally {
+          } finally {
             junit '**/build/test-results/jest/TESTS-*.xml'
-        }
+          }
+       } 
     }
 
     stage('packaging') {
-        sh "./gateway-app/gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
-        archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
+        dir('gateway-app') {
+          sh "./gateway-app/gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
+          archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
+        }
     }
 
     stage('deployment') {
+      dir('gateway-app') {
         sh "./gateway-app/gradlew deployHeroku --no-daemon"
+      }
     }
 
 }
