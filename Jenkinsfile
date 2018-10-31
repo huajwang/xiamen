@@ -18,8 +18,7 @@ node {
 
     stage('npm install') {
         dir('gateway-app') {
-          sh "node --version"
-          sh "./gradlew npmInstall -PnodeInstall --no-daemon --debug"
+          sh "./gradlew npmInstall -PnodeInstall --no-daemon"
         }
     }
 
