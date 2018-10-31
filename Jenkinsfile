@@ -18,7 +18,7 @@ node {
 
     stage('npm install') {
         dir('gateway-app') {
-          sh "./gradlew npmInstall -PnodeInstall --no-daemon"
+          sh "./gradlew npmInstall -PnodeInstall --no-daemon --stacktrace"
         }
     }
 
