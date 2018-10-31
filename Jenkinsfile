@@ -16,6 +16,14 @@ node {
           } 
     }
 
+    stage('npm install') {
+        dir('gateway-app') {
+          sh "npm --version"
+          sh "node --version"
+          sh "./gradlew npmInstall -PnodeInstall --no-daemon --debug"
+        }
+    }
+
     stage('backend tests') {
         dir('gateway-app') {
           try {
