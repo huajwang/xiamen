@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 
 node {
+    env.NODEJS_HOME="${tool 'Node 8.x'}"
+    env.PATH = "${env.NODEJS_HOME/bin}:${env.PATH}"
+    sh 'npm --version'
     stage('checkout') {
         checkout scm
     }
