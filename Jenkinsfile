@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 node {
-    def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+    def nodeHome = tool name: 'Node.js 6.9.5', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     stage('checkout') {
         checkout scm
     }
