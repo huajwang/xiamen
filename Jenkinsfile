@@ -37,7 +37,7 @@ node {
     stage('frontend tests') {
         dir('gateway-app') {
           try {
-            sh "./gateway-app/gradlew npm_test -PnodeInstall --no-daemon"
+            sh "./gradlew npm_test -PnodeInstall --no-daemon"
           } catch(err) {
             throw err
           } finally {
@@ -48,7 +48,7 @@ node {
 
     stage('packaging') {
         dir('gateway-app') {
-          sh "./gateway-app/gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
+          sh "./gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
           archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
         }
     }
