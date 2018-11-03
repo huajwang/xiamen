@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
 node {
+    env.NODEJS_HOME="${tool 'Node-7.4.0'}"
     stage('checkout') {
         checkout scm
     }
