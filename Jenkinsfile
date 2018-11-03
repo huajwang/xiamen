@@ -55,7 +55,7 @@ node {
 
     stage('deployment') {
       dir('gateway-app') {
-        sh "./gateway-app/gradlew deployHeroku --no-daemon"
+        sh "./gradlew deployHeroku --no-daemon"
       }
     }
 
