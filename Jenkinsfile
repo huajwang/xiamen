@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 node {
-    env.NODEJS_HOME="{tool 'node-8.12.0'}"
+    env.NODEJS_HOME="{tool 'node-800.12.0'}"
     env.PATH = "${env.NODEJS_HOME/bin}:${env.PATH}"
     sh 'npm --version'
     stage('checkout') {
