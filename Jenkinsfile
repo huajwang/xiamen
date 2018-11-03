@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
 node {
-    def nodeHome = tool 'Node.js 6.9.5'
     stage('checkout') {
         checkout scm
     }
