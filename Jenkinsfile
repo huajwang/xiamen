@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 node {
-    env.NODEJS_HOME="${tool 'node-5.10.1'}"
+    def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     stage('checkout') {
         checkout scm
     }
