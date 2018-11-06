@@ -48,14 +48,14 @@ node {
 
     stage('packaging') {
         dir('gateway-app') {
-          sh "./gradlew bootWar -x test -Pprod -PnodeInstall --no-daemon"
-          archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
+          sh "./gradlew bootWar -Pprod jibDockerBuild --no-daemon"
         }
     }
 
     stage('deployment') {
       dir('gateway-app') {
-        sh "./gradlew deployHeroku --no-daemon"
+        sh "node --version "
+
       }
     }
 
