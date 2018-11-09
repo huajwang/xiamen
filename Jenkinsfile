@@ -72,10 +72,13 @@ node {
    
     stage('create gateway docker image') {
         dir('gateway-app') {
-          sh "./gradlew bootWar -Pprod jibDockerBuild --no-daemon"
-          sh "docker image tag store huajwang/store"
+          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            def customImage = docker.build("huajwang/gateway")
+            customImage.push("${env.BUILD_NUMBER}")
+            customImage.push("latest")
+          }
         }
-    }
+     }
     
     stage('create invoice docker image') {
         dir('invoice') {
@@ -91,26 +94,9 @@ node {
         }
     }
     
-   stage('Build image') {
-        /* This builds the actual image from Dockerfile; synonymous to
-         * docker build on the command line */
-
-        app = docker.build("getintodevops/hellonode")
-    }
-    
-   stage('Push image') {
-        /* Finally, we'll push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag */
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
-        }
-    
     stage('deployment') {
       dir('gateway-app') {
         sh "node --version "
-
       }
     }
 
