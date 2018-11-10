@@ -24,7 +24,7 @@ node {
 
     stage('create gateway docker image') {
         dir('gateway-app') {
-          docker.withRegistry('', 'docker-hub-credentials') {
+          docker.withDockerRegistry(registry: [url: '', credentialsId: 'docker-hub-credentials']) {
             def customImage = docker.build("huajwang/gateway")
             customImage.push("${env.BUILD_NUMBER}")
             customImage.push("latest")
