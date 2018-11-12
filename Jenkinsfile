@@ -25,7 +25,7 @@ node {
     stage('create gateway docker image') {
         dir('gateway-app') {
             withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
-              def customImage = docker.build("huajwang/gateway")
+              def customImage = docker.build("huajwang/store")
               customImage.push("${env.BUILD_NUMBER}")
               customImage.push("latest")
           }
@@ -34,15 +34,23 @@ node {
     
     stage('create invoice docker image') {
         dir('invoice') {
-          sh "./gradlew bootWar -Pprod jibDockerBuild --no-daemon"
-          sh "docker image tag invoice huajwang/invoice"
+           withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
+              def customImage = docker.build("huajwang/invoice")
+              customImage.push("${env.BUILD_NUMBER}")
+              customImage.push("latest")
+          }
+
         }
     }
     
     stage('create notification docker image') {
         dir('notification') {
-          sh "./gradlew bootWar -Pprod jibDockerBuild --no-daemon"
-          sh "docker image tag notification huajwang/notification"
+           withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
+              def customImage = docker.build("huajwang/notification")
+              customImage.push("${env.BUILD_NUMBER}")
+              customImage.push("latest")
+          }
+
         }
     }
     
