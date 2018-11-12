@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "gateway-app",
+      "invoice",
+      "notification"
+    ],
+    "directoryPath": "../",
+    "clusteredDbApps": [],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "NmYzYjM1OGE2MzgzOTExZTYxMzRmMDY0ZThjYmIzMGQ1ZTdiN2Y1OGYwZTBiMWEwYTk3MThlYjU1MWNhZDIyM2Q5NjE3NjYwMmJmN2Y2N2QzNjI3MzcxNjRmMjdlNjMwOTFlYQ==",
+    "dockerRepositoryName": "huajwang",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "LoadBalancer",
+    "monitoring": "no",
+    "istio": "no",
+    "istioRoute": false
+  }
+}
