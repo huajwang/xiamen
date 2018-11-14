@@ -2,8 +2,8 @@
     "storeApp": {
         "NotificationType" : {
             "null": "",
-            "EMAIL": "EMAIL",
-            "SMS": "SMS",
+            "EMAIL": "电子邮件",
+            "SMS": "短信",
             "PARCEL": "PARCEL"
         }
     }

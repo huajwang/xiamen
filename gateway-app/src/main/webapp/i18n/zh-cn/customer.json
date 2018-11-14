@@ -3,28 +3,28 @@
     "storeApp": {
         "customer" : {
             "home": {
-                "title": "Customers",
-                "createLabel": "创建新 Customer",
-                "createOrEditLabel": "创建或编辑 Customer"
+                "title": "顾客",
+                "createLabel": "创建新顾客",
+                "createOrEditLabel": "创建或编辑顾客"
             },
-            "created": "Customer {{ param }} 创建成功",
-            "updated": "Customer {{ param }} 更新成功",
-            "deleted": "Customer {{ param }} 删除成功",
+            "created": "顾客 {{ param }} 创建成功",
+            "updated": "顾客 {{ param }} 更新成功",
+            "deleted": "顾客 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Customer {{ id }} 吗？"
+                "question": "你确定要删除顾客 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Customer"
+                "title": "顾客"
             },
-            "firstName": "First Name",
-            "lastName": "Last Name",
-            "gender": "Gender",
-            "email": "Email",
-            "phone": "Phone",
+            "firstName": "名字",
+            "lastName": "姓",
+            "gender": "性别",
+            "email": "电子邮件",
+            "phone": "电话",
             "addressLine1": "Address Line 1",
             "addressLine2": "Address Line 2",
-            "city": "City",
-            "country": "Country",
+            "city": "县市",
+            "country": "国家",
             "user": "User",
             "order": "Order"
         }

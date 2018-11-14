@@ -16,12 +16,12 @@
             "detail": {
                 "title": "Product"
             },
-            "name": "Name",
-            "description": "Description",
-            "price": "Price",
-            "size": "Size",
-            "image": "Image",
-            "productCategory": "Product Category"
+            "name": "名称",
+            "description": "描述",
+            "price": "单价",
+            "size": "规格",
+            "image": "图片",
+            "productCategory": "商品类别"
         }
     }
 }

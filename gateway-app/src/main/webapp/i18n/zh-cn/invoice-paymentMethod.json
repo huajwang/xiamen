@@ -2,8 +2,8 @@
     "storeApp": {
         "PaymentMethod" : {
             "null": "",
-            "CREDIT_CARD": "CREDIT_CARD",
-            "CASH_ON_DELIVERY": "CASH_ON_DELIVERY",
+            "CREDIT_CARD": "信用卡",
+            "CASH_ON_DELIVERY": "货到付款",
             "PAYPAL": "PAYPAL"
         }
     }

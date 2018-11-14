@@ -2,9 +2,9 @@
     "storeApp": {
         "OrderStatus" : {
             "null": "",
-            "COMPLETED": "COMPLETED",
-            "PENDING": "PENDING",
-            "CANCELLED": "CANCELLED"
+            "COMPLETED": "完成",
+            "PENDING": "处理中",
+            "CANCELLED": "已取消"
         }
     }
 }
