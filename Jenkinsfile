@@ -3,7 +3,8 @@
 node {
     stage('Initialize') {
        def dockerHome = tool 'mydocker'
-       env.PATH = "${dockerHome}/bin:${env.PATH}"
+       def NODEJS_HOME = tool 'mynodejs'
+       env.PATH = "${dockerHome}/bin:${NODEJS_HOME}/bin:${env.PATH}"
     }
 
     stage('checkout') {
