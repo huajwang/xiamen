@@ -27,53 +27,6 @@ node {
         }
     }
 
-    stage('backend tests') {
-        dir('gateway-app') {
-          try {
-            sh "./gradlew test -PnodeInstall --no-daemon"
-          } catch(err) {
-            throw err
-          } finally {
-            junit '**/build/**/TEST-*.xml'
-          }
-        }
-    }
-
-    stage('frontend tests') {
-        dir('gateway-app') {
-          try {
-            sh "./gradlew npm_test -PnodeInstall --no-daemon"
-          } catch(err) {
-            throw err
-          } finally {
-            junit '**/build/test-results/jest/TESTS-*.xml'
-          }
-       }
-    }
-
-    stage('invoice tests') {
-        dir('invoice') {
-            try {
-            sh "./gradlew test -PnodeInstall --no-daemon"
-          } catch(err) {
-            throw err
-          } finally {
-            junit '**/build/**/TEST-*.xml'
-          }
-        }
-    }
-
-    stage('notification tests') {
-        dir('notification') {
-            try {
-            sh "./gradlew test -PnodeInstall --no-daemon"
-          } catch(err) {
-            throw err
-          } finally {
-            junit '**/build/**/TEST-*.xml'
-          }
-        }
-    }
 
     stage('create gateway docker image') {
         dir('gateway-app') {
