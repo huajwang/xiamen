@@ -41,9 +41,7 @@ node {
     stage('create invoice docker image') {
         dir('invoice') {
            withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
-              def customImage = docker.build("huajwang/invoice")
-              customImage.push("${env.BUILD_NUMBER}")
-              customImage.push("latest")
+             sh "./gradlew bootWar -Pprod jibDockerBuild"
           }
 
         }
