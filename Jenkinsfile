@@ -31,22 +31,12 @@ node {
     stage('create gateway docker image') {
         dir('gateway-app') {
             withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
-              def customImage = docker.build("huajwang/store")
-              customImage.push("${env.BUILD_NUMBER}")
-              customImage.push("latest")
+              sh "./gradlew bootWar -Pprod jibDockerBuild"
+              sh "docker push huajwang/store:latest"
           }
         }
      }
     
-    stage('create invoice docker image') {
-        dir('invoice') {
-           withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
-             sh "./gradlew bootWar -Pprod jibDockerBuild"
-	     sh "docker push huajwang/store:latest"
-          }
-
-        }
-    }
     
     stage('create notification docker image') {
         dir('notification') {
