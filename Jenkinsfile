@@ -42,6 +42,7 @@ node {
         dir('invoice') {
            withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
              sh "./gradlew bootWar -Pprod jibDockerBuild"
+	     sh "docker push huajwang/store:latest"
           }
 
         }
