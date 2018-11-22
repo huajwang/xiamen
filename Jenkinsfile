@@ -33,22 +33,12 @@ node {
         dir('gateway-app') {
             withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
               sh "./gradlew bootWar -Pprod jibDockerBuild"
+              sh "docker image tag store:latest huajwang/store:latest"
               sh "docker push huajwang/store:latest"
           }
         }
      }
     
-    
-    stage('create notification docker image') {
-        dir('notification') {
-           withDockerRegistry([url: '',credentialsId: 'docker-hub-credentials']) {
-              def customImage = docker.build("huajwang/notification")
-              customImage.push("${env.BUILD_NUMBER}")
-              customImage.push("latest")
-          }
-
-        }
-    }
     
     stage('deployment') {
       dir('gateway-app') {

@@ -1,1 +1,0 @@
-./gradlew bootWar -Pprod jibDockerBuild
